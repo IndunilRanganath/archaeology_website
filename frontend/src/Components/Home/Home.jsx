@@ -1,14 +1,30 @@
 import React from 'react'
 import './home.css'
-import bg from '../../Assets'
+import image from '../../Assets/bg.jpg'
 
-export const Home = () => {
+const Home = () => {
   return (
-    // <section className='home'>
-      // <img src={bg}></img>
-    // </section>
-    <h3>Hello</h3>
-  )
+    <section className='home'>
+
+      <div className='overLay'></div>
+      <img className='bgimg' src={image}></img>
+
+      <div className="homeContent container">
+        <div className="textDiv">
+
+          <span className="smallText">
+            Our Package
+          </span>
+          
+          <h1 className="homeTitle">
+            Search your location
+          </h1>
+
+        </div>
+      </div>
+
+    </section>
+  );
 }
 
 export default Home
