@@ -43,7 +43,7 @@ const Navbar = () => {
             </li>
 
             <li className='navItem'>
-              <a href='#' className='navLink'>Shop</a>
+              <a href='#' className='navLink'>Destination</a>
             </li>
 
             <li className='navItem'>
@@ -55,7 +55,7 @@ const Navbar = () => {
             </li>
 
             <button className='btn'>
-              <a href='#'>BOOK NOW</a>
+              <a href='#'>EXPLORE</a>
             </button>
           </ul>
 
