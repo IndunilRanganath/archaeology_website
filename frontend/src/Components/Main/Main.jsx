@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import './main.css'
 import img1 from '../../Assets/img1.jpg'
 import img2 from '../../Assets/img2.jpg'
@@ -8,7 +8,12 @@ import img5 from '../../Assets/img5.jpg'
 import img6 from '../../Assets/img6.jpg'
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 import {HiOutlineClipboardList} from 'react-icons/hi'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 const Data = [
+
   {
     id:1,
     imgSrc: img1,
@@ -56,12 +61,18 @@ const Data = [
 ]
 
 
-
 export const Main = () => {
+
+
+  useEffect(() => {
+    Aos.init({duration:2000});
+    }, [])
+
+
   return (
-    <section className='main container section'>
+    <section className='main container section' data-aos="fade-up" >
       <div className="secTitle">
-        <h3 className='title'>
+        <h3 className='title' data-aos="fade-right">
           Most Visited Destination
         </h3>
       </div>
@@ -72,6 +83,7 @@ export const Main = () => {
                 className='singleDestination'>
                 
                 <div className="imageDiv">
+                  
                   <img src={imgSrc} alt={destTitle} />
                 </div>
                 <div className='cardInfo'>
